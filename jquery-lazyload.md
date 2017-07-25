@@ -45,7 +45,7 @@ lazyload()方法接收一个对象，可以通过设置对象的属性来对懒�
 	$("img.lazy").lazyload({
 		container: $("container")
 	});
-##设置查找图片张数 - failurelimit
+##设置查找图片张数 - failure_limit
 lazyload的实现原理是，在页面滚动时，会搜索未加载的图片，如果图片在可视范围内就加载，默认情况下当找到第一张不在可见区域的图片时就会停止搜索。
 ######代码
 	$("img.lazy").lazyload({
