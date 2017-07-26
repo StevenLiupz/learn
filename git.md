@@ -50,3 +50,5 @@
 		如果要一次推送所有本地新增的标签上去，可以使用git push origin --tags
 	19. git checkout tagName  #切换到标签
 	20. git tag -a v1.0.0 -m 'version describe' commitID  #给指定的commit补打标签
+	21. git tag -d 标签名	#删除本地标签
+	22. git push origin -d tag 标签名	#删除远程服务器标签，git v1.7.0以上支持
