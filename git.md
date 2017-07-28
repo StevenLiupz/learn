@@ -46,7 +46,7 @@
 		git tag -a v1.4 -m 'my version 1.4'  #创建一个含附注的标签，其中-a指定标签名字，-m指定对应的标签说明
 	17. git show 标签名  #查看标签信息
 	18. git push origin tagName  #推送标签，其中origin可以是远程仓库地址或别名，tagName是标签名
-		默认情况下，git push不会把标签传送到远端服务器上，只有通过显示命令才能将标签分享到远程仓库。
+		默认情况下，git push不会把标签传送到远	端服务器上，只有通过显示命令才能将标签分享到远程仓库。
 		如果要一次推送所有本地新增的标签上去，可以使用git push origin --tags
 	19. git checkout tagName  #切换到标签
 	20. git tag -a v1.0.0 -m 'version describe' commitID  #给指定的commit补打标签
