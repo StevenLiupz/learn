@@ -197,3 +197,18 @@ scrollBehavior 方法接收 to 和 from 路由对象。第三个参数 savedPosi
 	const Baz = r => require.ensure([], () => r(require('./Baz.vue')), 'group-foo')
 Webpack 将相同 chunk 下的所有异步模块打包到一个异步块里面 —— 这也意味着我们无须明确列出 require.ensure 的依赖（传空数组就行）
 ##路由信息对象
+一个route object(路由信息对象)表示当前激活的路由的状态信息，包含了当前url解析得到的信息，还有url匹配到的route records(路由记录)。
+####路由信息对象的属性
+	1. $route.path		
+		type: string
+		对应当前路由的路径，综上解析为绝对路径，如"/foo/bar"
+	2. $route.params
+		type: object
+		一个key/value对象(通过&拆分得到的)，包含了动态片段和全匹配片段，如果没有路由参数，就是一个空对象；
+	3. $route.query
+		type: object
+		一个key/value对象(通过=号拆分)，表示url查询参数，如果没有，则是个空对象；
+	4. ￥、$route.hash
+		type: string
+		当前路由的hash值(带#号)，如果没有hash值则为空字符串；
+	5. 
