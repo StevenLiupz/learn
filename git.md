@@ -29,15 +29,16 @@
 	    git log --oneline  #将查询到的历史版本信息压缩到一行显示
 	    git reflog  #上帝视角查看文件历史版本的变化(所有的操作记录)
 	09. git reset  #回退历史版本：
-	    1. git reset --mixed commitID --mixed是默认方式，只保留源码 
+	    1. git reset --mixed commitID --mixed是默认方式，除了代码修改保留外其他的都还原，包括git commit和git status里面的内容。
 	    2. git reset --soft commitID  --soft只是回退了commit的信息，如果还要提交，直接commit即可
-	    3. git reset --hard commitID  --hard是彻底回退到某个版本本地的源码也会变为上个版本的内容
+	    3. git reset --hard commitID  --hard是彻底回退到某个版本本地的源码也会变为上个版本的内容，包括代码，git add后的内容以及git commit里面的内容
 	10. git branch  #列出本地已经存在的分支，并且在当前分支前面加*号标记
 		git branch -r	#列出远程分支
 		git branch -a   #列出本地分支和远程分支
 	11. git branch 分支名  #基于当前分支创建子分支
 	12. git checkout 分支名  #切换分支  
 		git checkout -b 分支名  #创建分支并切换到该分支
+		git checkout -b dev origin/dev  #作用是checkout远程的dev分支，在本地起名为dev分支，并切换到本地的dev分支
 	13. git merge 被合并的分支名  #合并分支，这里是将目标分支合并到当前执行环境下的分支上(主支)
 	14. git branch -d 要删除的分支名  #删除分支
 	15. git pull 远程仓库地址或别名 分支名  #将远程仓库某个分支上的历史版本拉取到本地

@@ -34,3 +34,36 @@ v-for渲染列表时，给每一项提供一个唯一的key属性，以便跟踪
 	</div>
 
 ## 事件修饰符
+vue提供的事件修饰符`.stop .prevent .capture .self .once`，通过.表示的指令后缀来调用修饰符。
+
+	<!-- 阻止单击事件冒泡 -->
+	<a v-on:click.stop="doThis"></a>
+
+	<!-- 提交事件不再重载页面 -->
+	<form v-on:submit.prevent="onSubmit"></form>
+
+	<!-- 修饰符可以串联  -->
+	<a v-on:click.stop.prevent="doThat"></a>
+
+	<!-- 只有修饰符 -->
+	<form v-on:submit.prevent></form>
+
+	<!-- 添加事件侦听器时使用事件捕获模式 -->
+	<div v-on:click.capture="doThis">...</div>
+
+	<!-- 只当事件在该元素本身（比如不是子元素）触发时触发回调 -->
+	<div v-on:click.self="doThat">...</div>
+## 组件
+### data必须是一个函数
+在组件中 `data` 必须是一个函数。
+
+	Vue.component('myComponent',{
+		template: '<span>name</span>',
+		data: function(){
+			return {counter: 0} //返回一个对象	
+		}
+	})
+
+### 组件中的通信
+#### 父子组件通信
+在vue中，父子组件的关系可以总结为props doen,events up，父组件通过props向下传递数据给子组件，子组件通过events给父组件发送信息。
