@@ -31,7 +31,7 @@
 	09. git reset  #回退历史版本：
 	    1. git reset --mixed commitID --mixed是默认方式，除了代码修改保留外其他的都还原，包括git commit和git status里面的内容。
 	    2. git reset --soft commitID  --soft只是回退了commit的信息，如果还要提交，直接commit即可
-	    3. git reset --hard commitID  --hard是彻底回退到某个版本本地的源码也会变为上个版本的内容，包括代码，git add后的内容以及git commit里面的内容
+	    3. git reset --hard commitID  --hard是彻底回退到某个版本本地的源码也会变为上个版本的内容，包括代码，git add后的内容以及git commit里面的内容 
 	10. git branch  #列出本地已经存在的分支，并且在当前分支前面加*号标记
 		git branch -r	#列出远程分支
 		git branch -a   #列出本地分支和远程分支
@@ -43,6 +43,7 @@
 	14. git branch -d 要删除的分支名  #删除分支
 	15. git pull 远程仓库地址或别名 分支名  #将远程仓库某个分支上的历史版本拉取到本地
 	16. git push 远程仓库地址或别名 分支名  #将当前分支历史版本推送到远程仓库某个分支上
+		git push origin 分支名 -f  #强制push，一般用于版本回退后的强制push
 	16. git tag  #查看已有的标签
 		git tag -l 'v1.4.*'  #git tag支持简单的正则表达式，这里是查看所有1.4.x版本的标签
 		git tag 'v1.4'  #创建一个轻量级标签
