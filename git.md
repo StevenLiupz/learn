@@ -29,12 +29,14 @@
 	01. git branch  #列出本地已经存在的分支，并且在当前分支前面加*号标记
 		git branch -r	#列出远程分支
 		git branch -a   #列出本地分支和远程分支
-	02. git branch 分支名  #基于当前分支创建子分支
+	02. git branch 分支名  #新建一个分支，但依然停留在当前分支
+		#一般用于远程仓库新创建了一个分支时，本地`git branch -r`是看不到新创建的分支的，此时就要用该方法
+		 创建分支，然后再git checkout到新创建的分支pull代码
 	03. git checkout 分支名  #切换分支  
 		git checkout -b 分支名  #创建分支并切换到该分支
 		git checkout -b dev origin/dev  #作用是checkout远程的dev分支，在本地起名为dev分支，并切换到本地的dev分支
 	04. git merge 被合并的分支名  #合并分支，这里是将目标分支合并到当前执行环境下的分支上(主支)
-	05. git branch -d 要删除的分支名  #删除分支
+	05. git branch -d 要删除的分支名  #删除分支 
 #####代码提交
 	01. git add dir1,dir2...dirn  #把文件添加到本地暂存区
 		其中dir1~dirn表示的是要添加的文件或是文件夹名称(需要是绝对路径)，可以使用命令 git add * 将所有更改过的文件添加到暂存区
