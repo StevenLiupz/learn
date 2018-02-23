@@ -9,7 +9,7 @@
 	Project Description sell project  	#项目描述
 	Autor Steven	#作者
 	Use build standalone	#打包方式(遇到Use build直接回车即可)
-	Install vue-router		#是否安装vue-router
+	Install vue-router		#是否安装vue-router，y
 	Use ESLint to lint your code 	#是否使用ESLint规范代码，建议不要写y
 	Setup unit tests with Karma·Mocha？ #是否需要单元测试，n
 	Setup e2c tests with Nightwatch？	#是否需要依托于HTTP的REST API，n
@@ -31,6 +31,11 @@
 #####6. 打包上线
 	`npm run build`
 	自己的项目文件都需要放到src文件夹下，项目开发完成之后输入以上命令进行打包
+#####7. 参考文献
+基于vue-cli快速构建项目: [https://www.jianshu.com/p/2769efeaa10a](https://www.jianshu.com/p/2769efeaa10a "基于vue-cli快速构建项目")  
+Vue2.0入坑教程（上）： [https://www.jianshu.com/p/1626b8643676](https://www.jianshu.com/p/1626b8643676 "Vue2.0入坑教程（上）")  
+Vue2.0入坑教程（中）： [https://www.jianshu.com/p/2b661d01eaf8](https://www.jianshu.com/p/2b661d01eaf8 "Vue2.0入坑教程（中）")  
+Vue2.0入坑教程（下）： [https://www.jianshu.com/p/ec436222c608](https://www.jianshu.com/p/ec436222c608 "Vue2.0入坑教程（下）")
 #####创建好目录后，各个文件的作用：
 	01. build  			#脚本目录
 	02. config    		#配置目录
